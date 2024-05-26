@@ -22,7 +22,7 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 
-	// Create - UPDATE
+	// Create - Update
 	@RequestMapping(method = { RequestMethod.POST, RequestMethod.PUT })
 	public @ResponseBody Produto salvarProduto(@Valid Produto produto) {
 
@@ -48,7 +48,7 @@ public class ProdutoController {
 	}
 
 
-	// DELETE
+	// Delete
 	@DeleteMapping(path = "/{id}")
 	public void excluirProduto(@PathVariable int id) {
 		produtoRepository.deleteById(id);
